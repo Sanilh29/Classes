@@ -3,6 +3,8 @@
 
 using namespace std;
 
+
+
 char* Media::getTitle(){ //we use Media:: because we are using this inside the function struct Media and returning a value
   return title;
 }
@@ -10,3 +12,6 @@ char* Media::getTitle(){ //we use Media:: because we are using this inside the f
 int Media::getYear(){
   return year;
 }
+
+
+
