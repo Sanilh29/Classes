@@ -5,13 +5,16 @@ using namespace std;
 
 
 
-char* Media::getTitle(){ //we use Media:: because we are using this inside the function struct Media and returning a value
+char* Parent::getTitle(){ //we use Media:: because we are using this inside the function struct Media and returning a value
   return title;
 }
 
-int Media::getYear(){
+int Parent::getYear(){
   return year;
 }
 
+int Parent::getType(){
+  return type;
+}
 
 

@@ -1,14 +1,16 @@
 #include <iostream>
+#include "parent.h"
 
 using namespace std;
 
-class Movies {
+class Movies: public Parent{
  private:
   char* director;
   int duration;
-  int rating;
+  char* rating;
  public:
+  Movies();
   char* getDirector();
   int getDuration();
-  int getRating();
-}
+  char* getRating();
+};
