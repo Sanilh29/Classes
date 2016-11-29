@@ -10,6 +10,7 @@ class Movies: public Parent{
   char* rating;
  public:
   Movies();
+  ~Movies();
   char* getDirector();
   int getDuration();
   char* getRating();

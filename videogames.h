@@ -9,6 +9,7 @@ class Videogames: public Parent{
   char* rating;
  public:
   Videogames();
+  ~Videogames();
   char* getPublisher();
   char* getRating();
 };

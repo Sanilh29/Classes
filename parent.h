@@ -10,6 +10,8 @@ class Parent {
   int year;
   int type;
  public:
+  Parent();
+  ~Parent();
   char* getTitle();
   int getYear();
   int getType();

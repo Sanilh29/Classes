@@ -8,12 +8,13 @@ using namespace std;
 class Music: public Parent{
  private:
   char* publisher;
-  char* rating;
+  char* artist;
   int duration;
  public:
   Music();
+  ~Music();
   char* getPublisher();
-  char* getRating();
+  char* getArtist();
   int getDuration();
 };
 
