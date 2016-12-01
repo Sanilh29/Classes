@@ -9,7 +9,7 @@ class Videogames: public Parent{
   char* rating;
  public:
   Videogames();
-  ~Videogames();
+  virtual ~Videogames();
   char* getPublisher();
   char* getRating();
 };

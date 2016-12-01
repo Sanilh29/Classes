@@ -12,7 +12,7 @@ class Music: public Parent{
   int duration;
  public:
   Music();
-  ~Music();
+  virtual ~Music();
   char* getPublisher();
   char* getArtist();
   int getDuration();

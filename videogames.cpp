@@ -9,8 +9,10 @@ Videogames::Videogames(){
   rating = new char [32];
   cout << "Who's the publisher?" << endl;
   cin.get(publisher,30);
-  cout << "What is the movie rated?" << endl;
+  cin.ignore();
+  cout << "What is the videogame rated?" << endl;
   cin.get(rating, 4);
+  cin.ignore();
 }
 
 Videogames::~Videogames(){

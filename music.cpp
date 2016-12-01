@@ -9,10 +9,13 @@ Music::Music(){
   artist = new char[32];
   cout << "Who's the publisher?" << endl;
   cin.get(publisher,32);
+  cin.ignore();
   cout << "How long is the song?" << endl;
   cin >> duration;
+  cin.ignore();
   cout << "Who sings the song?" << endl;
   cin.get(artist, 32);
+  cin.ignore();
 }
 
 Music::~Music(){

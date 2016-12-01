@@ -7,8 +7,10 @@ Parent::Parent(){
   title = new char[32];
   cout << "What's the title?" << endl;
   cin.get(title,32);
+  cin.ignore();
   cout << "What's the year?" << endl;
   cin >> year;
+  cin.ignore();
 }
 
 Parent:: ~Parent(){

@@ -19,6 +19,7 @@ int main(){
   while (playing == true){
     cout << "Please input a command: search, add, delete, or quit." << endl;
     cin >> command;
+    cout << command << endl;
     if (0 == strcmp(command, "search")){
       searchItem(list);
     }
@@ -56,18 +57,19 @@ void deleteItem(vector<Parent*>*list){
 
 void addItem(vector<Parent*>*list){
   char command[15];
-  cout << "Enter what type of media you want to add to the directory: movie, music, or video." << endl;
+  cout << "Enter what type of media you want to add to the directory: movie, music, or videogames." << endl;
   cin >> command;
+  cin.ignore();
   if (0 == strcmp(command, "movie")){
     Movies* m= new Movies();
     list -> push_back(m);
     }
   if (0==strcmp(command, "music")){
-    Videogames* v = new Videogames();
-    list -> push_back(v);
-    }
-  if (0==strcmp(command, "video")){
     Music* c = new Music();
     list -> push_back(c);
+    }
+  if (0==strcmp(command, "videogames")){
+    Videogames* v = new Videogames();
+    list -> push_back(v);
     }
 }

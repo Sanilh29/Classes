@@ -11,7 +11,7 @@ class Parent {
   int type;
  public:
   Parent();
-  ~Parent();
+  virtual ~Parent();
   char* getTitle();
   int getYear();
   int getType();
