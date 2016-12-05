@@ -4,7 +4,7 @@
 using namespace std;
 
 class Movies: public Parent{
- private:
+ protected:
   char* director;
   int duration;
   char* rating;

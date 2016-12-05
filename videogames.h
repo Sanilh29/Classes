@@ -4,7 +4,7 @@
 using namespace std;
 
 class Videogames: public Parent{
- private:
+ protected:
   char* publisher;
   char* rating;
  public:

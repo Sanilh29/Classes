@@ -19,7 +19,6 @@ int main(){
   while (playing == true){
     cout << "Please input a command: search, add, delete, or quit." << endl;
     cin >> command;
-    cout << command << endl;
     if (0 == strcmp(command, "search")){
       searchItem(list);
     }
@@ -35,20 +34,63 @@ int main(){
   }
 }
 
-void searchItem(vector<Parent*>*list){
-
+void searchItem(vector<Parent*>*list){//doesnt find search input even if its in directory
+  char searchtitle[32];
+  cout << "Enter the name of the media you wish to search." << endl;
+  cin >> searchtitle;
+  for (vector<Parent*>::iterator it=(*list).begin(); it !=(*list).end(); ++it){
+    cout << (*it)->getTitle() << endl;
+    if (0== strcmp((*it)->getTitle(), searchtitle)){
+      Parent* parent = *it;
+      cout << "Title: " << parent->getTitle() << " " << "Year: " << parent->getYear() << endl;
+      if (parent->getType() == 1){
+	Movies* m = (Movies*)parent;
+	cout << "Director: " << m->getDirector() << endl;
+	cout << "Duration: " << m->getDuration() << endl;
+	cout << "Rating: " << m->getRating() << endl;
+      }
+      if (parent->getType() == 2){
+	Videogames* v = (Videogames*)parent;
+	cout << "Publisher: " << v->getPublisher() << endl;
+	cout << "Rating: " << v->getRating() << endl;
+      }
+      if (parent->getType() == 3){
+	Music* m = (Music*)parent;
+	cout << "Publisher: " << m->getPublisher() << endl;
+	cout << "Duration: " << m->getDuration() << endl;
+	cout << "Artist: " << m->getArtist() << endl;
+      }
+      (*list).erase(it);
+      break;
+    }
+    else {
+      cout << "There's no such media." << endl;
+    }
+  }
 }
 
 void deleteItem(vector<Parent*>*list){
   char deletetitle[32];
   cout << "Enter the name of the media you wish to delete." << endl;
   cin >> deletetitle;
-  cout << deletetitle << endl;
+  //cout << deletetitle << endl;
   cout << "Media Deleted." << endl;
   for (vector<Parent*>::iterator it =(*list).begin(); it !=(*list).end(); ++it){
     if (0 == strcmp((*it)->getTitle(), deletetitle)){
-      cout << deletetitle << endl;
-      delete (*it);
+      // cout << deletetitle << endl;
+      Parent* parent = *it;
+      if (parent->getType() == 1){
+	Movies* m = (Movies*)parent;
+	delete m;
+      }
+      if (parent->getType() == 2){
+	Videogames* v = (Videogames*)parent;
+	delete v;
+      }
+      if (parent->getType() == 3){
+	Music* m = (Music*)parent;
+	delete m;
+      }   
       (*list).erase(it);
       break;
     }

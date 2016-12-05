@@ -6,7 +6,7 @@
 using namespace std;
 
 class Music: public Parent{
- private:
+ protected:
   char* publisher;
   char* artist;
   int duration;

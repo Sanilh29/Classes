@@ -8,6 +8,7 @@ Parent::Parent(){
   cout << "What's the title?" << endl;
   cin.get(title,32);
   cin.ignore();
+  cout << title << endl;
   cout << "What's the year?" << endl;
   cin >> year;
   cin.ignore();
