@@ -1,3 +1,4 @@
+//receives variable input for the movies
 #include <iostream>
 #include "videogames.h"
 

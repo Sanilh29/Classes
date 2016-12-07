@@ -1,3 +1,4 @@
+//receives variable input for the music
 #include <iostream>
 #include "music.h"
 

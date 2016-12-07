@@ -1,3 +1,4 @@
+//includes variables and methods that relate to movies
 #include <iostream>
 #include "parent.h"
 

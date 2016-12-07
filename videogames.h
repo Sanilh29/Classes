@@ -1,3 +1,5 @@
+//includes variables and methods that relate to videogames
+
 #include <iostream>
 #include "parent.h"
 

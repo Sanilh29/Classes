@@ -1,3 +1,4 @@
+//includes variables and methods that relate to music
 #ifndef MUSICH_DEFINED
 #define MUSICH_DEFINED
 #include <iostream>
